@@ -1,0 +1,4 @@
+<li><label><%= name %></label></li>
+<% _.each(routes, function(route) { %> 
+  <li><a href="/#shuttle-route/<%= route.key %>"><%= route.name %></a></li> 
+<% }); %>
