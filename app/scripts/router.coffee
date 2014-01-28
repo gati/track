@@ -10,8 +10,8 @@ class exports.Main extends Backbone.Router
     null
 
   shuttleRoute: (slug) => 
-    route = window.track.App.store.shuttleRoutes.findWhere key: slug
-    stops = window.track.App.store.shuttleStops.filter (stop) -> 
+    route = window.track.appState.store.shuttleRoutes.findWhere key: slug
+    stops = window.track.appState.store.shuttleStops.filter (stop) -> 
       stop.get("key") in route.get "stops"
 
     route.set "stops", stops

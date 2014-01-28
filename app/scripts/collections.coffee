@@ -9,8 +9,16 @@ class ShuttleRoute extends Backbone.Model
     today = moment()
     today.isAfter(@startDate) and today.isBefore(@endDate)
 
-  prettyDate: (which) =>
-    moment(@get(which)).format("MMMM Do YYYY")
+  isOperating: =>
+    now = moment()
+    todayString = now.format("MM DD YYYY")
+    now.isAfter("#{todayString} #{@get('startTime')}") and now.isBefore("#{todayString} #{@get('endTime')}")    
+
+  prettyDate: (which) => @prettyDateTime(@get(which), "MMMM Do YYYY")
+
+  prettyTime: (which) => @prettyDateTime("#{moment().format("YYYY MM DD")} #{@get(which)}", "hA")
+
+  prettyDateTime: (dateString, format) => moment(dateString).format(format)
 
 
 class ShuttleStop extends Backbone.Model

@@ -23,7 +23,7 @@ class exports.Navigation extends Backbone.View
     @$el.find("ul").append sectionElement
 
   getRoutes: (section) =>
-    window.track.App.store.shuttleRoutes.filter (route) -> 
+    window.track.appState.store.shuttleRoutes.filter (route) -> 
       route.get("key") in section.routes
 
   closeNav: => $(".off-canvas-wrap").removeClass "move-right"
