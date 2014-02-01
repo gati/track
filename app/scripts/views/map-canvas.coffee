@@ -4,7 +4,7 @@ class exports.MapCanvas extends Backbone.View
   el: "#map"
 
   initialize: (options) =>
-    @appState = window.track.appState
+    @appState = options.appState
     google.maps.event.addDomListener(window, 'load', @render)
     @setListeners()
 
@@ -31,8 +31,14 @@ class exports.MapCanvas extends Backbone.View
       
     @mapObj = new google.maps.Map(@$el[0], mapOptions)
 
+    # force the map to fill the screen
     @$el.css("height", $(window).height())
+    
+    # no zoom for you!
+    google.maps.event.addDomListener @mapObj, 'zoom_changed', () =>
+      streetMap.setZoom(15) unless @mapObj.getZoom() is 15
 
+    # drop the a pin on the map for the current user
     @getUserLocation @setUserMapLocation
 
     @
@@ -68,3 +74,19 @@ class exports.MapCanvas extends Backbone.View
     googleBounds = new google.maps.LatLngBounds(swBound, neBound)
     
     @overlay = new window.mapOverlay(googleBounds, "/images/#{image}", @mapObj)
+
+
+  setShuttleStop: (stopModel) =>
+    coords = stopModel.get("location")
+    position = new google.maps.LatLng(coords.lat, coords.lng)
+    marker = new google.maps.Marker
+      position: position
+      zIndex: 1000
+      map: @mapObj
+      icon: "images/transparent-map-icon.png"
+
+    infoWindow = new google.maps.InfoWindow()
+
+    google.maps.event.addDomListener marker, "click", () =>
+      infoWindow.setContent(stopModel.get("name"))
+      infoWindow.open(@mapObj, marker)

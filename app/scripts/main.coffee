@@ -20,7 +20,7 @@ class exports.App
 
   setupInitialViews: =>
     sections = @store.sections
-    @statefulViews.navigation = (new track.Views.Navigation(collection:sections)).render()
+    @statefulViews.navigation = (new track.Views.Navigation(collection:sections, appState:@)).render()
 
     message = "<b>Film</b> shuttles are in blue, <b>Interactive</b> shuttles 
       are in green. Use the Routes menu to find a shuttle stopping 
@@ -28,7 +28,7 @@ class exports.App
 
     flash = (new track.Views.Flash(message:message)).render()
 
-    @statefulViews.mapCanvas = (new track.Views.MapCanvas()).render()
+    @statefulViews.mapCanvas = (new track.Views.MapCanvas(appState:@)).render()
 
   appReady: => 
     @setupInitialViews()
@@ -37,16 +37,14 @@ class exports.App
   init: =>
     _.mixin(_.str.exports())
 
-    @router = new track.Routers.Main()
+    @router = new track.Routers.Main(appState: @)
     @bus = _.extend {}, Backbone.Events
 
     @on "app:ready", @appReady
 
     bootstrapData = @getBootstrapData()
     bootstrapData.then @setupStore
-    bootstrapData.then () => @trigger "app:ready"
-
-    exports.appState = @    
+    bootstrapData.then () => @trigger "app:ready"   
 
 $ ->
   'use strict'

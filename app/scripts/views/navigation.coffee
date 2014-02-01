@@ -6,6 +6,11 @@ class exports.Navigation extends Backbone.View
   events: 
     "click a": "closeNav"
 
+  initialize: (options) =>
+    @appState = options.appState
+
+    super options
+
   render: =>
     @$el.empty()
     @$el.html(window.track.Utils.getTemplate("navigation"))
@@ -23,7 +28,7 @@ class exports.Navigation extends Backbone.View
     @$el.find("ul").append sectionElement
 
   getRoutes: (section) =>
-    window.track.appState.store.shuttleRoutes.filter (route) -> 
+    @appState.store.shuttleRoutes.filter (route) -> 
       route.get("key") in section.routes
 
   closeNav: => $(".off-canvas-wrap").removeClass "move-right"
