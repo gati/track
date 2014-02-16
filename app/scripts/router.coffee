@@ -12,7 +12,7 @@ class exports.Main extends Backbone.Router
 
   index: => 
     # load all of the shuttles
-    null
+    @navigate('shuttle-route/all', true);
 
   shuttleRoute: (slug) => 
     @mapView = @appState.statefulViews.mapCanvas
@@ -32,13 +32,15 @@ class exports.Main extends Backbone.Router
       routeJSON = route.toJSON()
       routeJSON.stops = (stop.toJSON() for stop in routeJSON.stops)
 
+      routeName = if route.get("key") is "all" then "Shuttle routes are" else "The <b>#{routeJSON.name}</b> route is"
+
       if not route.isActive()
-        message = "Oh nooooes! The <b>#{routeJSON.name}</b> route is only active from 
+        message = "Oh nooooes! #{routeName} only active from 
           #{route.prettyDate('startDate')} to #{route.prettyDate('endDate')} 
-          #epicschedulingfail"
+          #ilovewalking"
 
       else if not route.isOperating()
-        message = "Bummer! The <b>#{routeJSON.name}</b> route is only active from 
+        message = "Bummer! #{routeName} only active from 
           #{route.prettyTime('startTime')} to #{route.prettyTime('endTime')} 
           #sadface"
 

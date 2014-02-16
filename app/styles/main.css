@@ -10,3 +10,7 @@ body {
 .alert-box {
   margin-bottom:0px;
 }
+
+a.menu-icon {
+  width: 7.8125rem;
+}

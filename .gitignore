@@ -6,3 +6,4 @@ test/temp
 .tmp
 test/bower_components/
 app/data.json
+app/data.json.bk
