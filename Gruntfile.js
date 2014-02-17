@@ -189,6 +189,8 @@ module.exports = function (grunt) {
                 files: {
                     '<%= yeoman.dist %>/styles/main.css': [
                         '.tmp/styles/{,*/}*.css',
+                        '<%= yeoman.app %>/bower_components/foundation/css/normalize.css',
+                        '<%= yeoman.app %>/bower_components/foundation/css/foundation.css',
                         '<%= yeoman.app %>/styles/{,*/}*.css'
                     ]
                 }
@@ -225,8 +227,9 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
+                        "images/{,*/}*.{webp,gif,png,svg,jpg}",
                         'styles/fonts/{,*/}*.*',
+                        "data.json"
                     ]
                 }]
             }
@@ -244,7 +247,7 @@ module.exports = function (grunt) {
                     src: [
                         '<%= yeoman.dist %>/scripts/{,*/}*.js',
                         '<%= yeoman.dist %>/styles/{,*/}*.css',
-                        '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
+                        //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp}',
                         '/styles/fonts/{,*/}*.*',
                     ]
                 }
