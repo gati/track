@@ -30,7 +30,7 @@ class exports.Main extends Backbone.Router
     #
     makeMessage = (route) ->
       routeJSON = route.toJSON()
-      routeJSON.stops = (stop.toJSON() for stop in routeJSON.stops)
+      routeJSON.stopModels = (stop.toJSON() for stop in routeJSON.stopModels)
 
       routeName = if route.get("key") is "all" then "Shuttle routes are" else "The <b>#{routeJSON.name}</b> route is"
 
@@ -46,7 +46,7 @@ class exports.Main extends Backbone.Router
 
       else
         message = "You're looking at the <b>#{route.name}</b> route! It stops at 
-          #{listStops(routeJSON.stops)}"
+          #{listStops(routeJSON.stopModels)}"
 
 
       message
@@ -58,7 +58,7 @@ class exports.Main extends Backbone.Router
     stops = @appState.store.shuttleStops.filter (stop) -> 
       stop.get("key") in route.get "stops"
 
-    route.set "stops", stops    
+    route.set "stopModels", stops    
     
     #
     # Show the right message above the map
@@ -81,4 +81,5 @@ class exports.Main extends Backbone.Router
     #
     # Add stops to the map
     #
+    @mapView.clearMarkers()
     _(stops).each @mapView.setShuttleStop

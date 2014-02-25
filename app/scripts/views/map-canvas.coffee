@@ -8,6 +8,8 @@ class exports.MapCanvas extends Backbone.View
     google.maps.event.addDomListener(window, 'load', @render)
     @setListeners()
 
+    @markers = []
+
     super options
 
   setListeners: =>
@@ -36,11 +38,10 @@ class exports.MapCanvas extends Backbone.View
     
     # no zoom for you!
     google.maps.event.addDomListener @mapObj, 'zoom_changed', () =>
-      streetMap.setZoom(15) unless @mapObj.getZoom() is 15
+      @mapObj.setZoom(15) unless @mapObj.getZoom() is 15
 
     google.maps.event.addDomListener @mapObj, "click", (e) =>
-      console.log('lat:'+e.latLng.lat().toFixed(6))
-      console.log('lng:'+e.latLng.lng().toFixed(6))
+      console.log('"lat":'+e.latLng.lat().toFixed(6)+","+'"lng":'+e.latLng.lng().toFixed(6))
 
     # drop the a pin on the map for the current user
     @getUserLocation @setUserMapLocation
@@ -83,17 +84,22 @@ class exports.MapCanvas extends Backbone.View
     @overlay = new window.mapOverlay(googleBounds, "/images/#{image}", @mapObj)
 
 
+  clearMarkers: =>
+    _(@markers).each (marker) => marker.setMap null
+
   setShuttleStop: (stopModel) =>
     coords = stopModel.get("location")
     image = stopModel.get("image") ? "transparent-map-icon.png"
     position = new google.maps.LatLng(coords.lat, coords.lng)
-    marker = new google.maps.Marker
+    marker = new RichMarker
       position: position
-      zIndex: 1000
+      content: '<div class="markerContainer"><img src="images/'+image+'"/></div>'
       map: @mapObj
-      icon: "images/" + image
+      shadow: "images/transparent-map-icon.png"
 
-    infoWindow = new google.maps.InfoWindow()
+    @markers.push marker
+
+    #infoWindow = new google.maps.InfoWindow()
 
     #google.maps.event.addDomListener marker, "click", () =>
     #  infoWindow.setContent(stopModel.get("name"))
