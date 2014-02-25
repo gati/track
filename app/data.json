@@ -24,6 +24,7 @@
       "image": "stops/FilmRoute_ACCStop.png"
     },
     
+
     {
       "key": "palmacc",
       "location": {
@@ -32,6 +33,30 @@
       },
       "name": "Austin Convention Center",
       "image": "stops/PalmerLongHyatt_ACCStop.png"
+    },
+    {
+      "key": "palmpalm",
+      "location": {
+        "lat":30.260884,"lng":-97.752142
+      },
+      "name": "Palmer Event Center",
+      "image": "stops/PalmerLongHyatt_PalmerStop.png"
+    },
+    {
+      "key": "palmhyatt",
+      "location": {
+        "lat":30.258734,"lng":-97.745447 
+      },
+      "name": "Hyatt Hotel",
+      "image": "stops/PalmerLongHyatt_HyattStop.png"
+    },
+    {
+      "key": "palmlong",
+      "location": {
+        "lat":30.258474,"lng":-97.751369 
+      },
+      "name": "Long Center",
+      "image": "stops/PalmerLongHyatt_LongCenterStop.png"
     },
 
 
@@ -332,7 +357,7 @@
           "lng":-97.740254 
         }
       },
-      "stops": ["palmacc"],
+      "stops": ["palmacc","palmpalm","palmhyatt","palmlong"],
       "shuttles": [
         "23653545", 
         "23653453", 

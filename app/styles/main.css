@@ -14,3 +14,7 @@ body {
 a.menu-icon {
   width: 7.8125rem;
 }
+
+.markerContainer img {
+  max-width: none;
+}
