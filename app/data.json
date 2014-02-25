@@ -1,0 +1,428 @@
+{
+  "sections":[
+    {
+      "name":"Interactive", 
+      "key": "interactive",
+      "routes": ["att", "hyatt", "sheraton", "all"]
+    },
+    {
+      "name": "Film", 
+      "key": "film",
+      "routes": ["film1", "film2"]
+    }
+  ],
+  "shuttleStops": [
+    
+    
+    {
+      "key": "filmacc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "stops/FilmRoute_ACCStop.png"
+    },
+    
+    {
+      "key": "palmacc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "stops/PalmerLongHyatt_ACCStop.png"
+    },
+
+
+
+    {
+      "key": "altacc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "stops/AltFilmRoute_ACCStop.png"
+    },
+    {
+      "key": "altrollins",
+      "location": {
+        "lat":30.258919,"lng":-97.753429 
+      },
+      "name": "Alternate Rollins",
+      "image": "stops/AltFilmRoute_AlternateRollinsStop.png"
+    },
+    {
+      "key": "altparamount",
+      "location": {
+        "lat":30.269335,"lng":-97.745748
+      },
+      "name": "Paramount InterContinental",
+      "image": "stops/AltFilmRoute_ParamountIntercontinentalStop.png"
+    },
+    {
+      "key": "alttopfer",
+      "location": {
+        "lat":30.262848,"lng":-97.757549 
+      },
+      "name": "Topfer Theatre",
+      "image": "stops/AltFilmRoute_TopferTheatreStop.png"
+    },
+    {
+      "key": "altviolet",
+      "location": {
+        "lat":30.264331,"lng":-97.745619
+      },
+      "name": "Violet Crown",
+      "image": "stops/AltFilmRoute_VioletCrownStop.png"
+    },
+
+
+
+    {
+      "key": "attacc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "stops/ATTRoute_ACCStop.png"
+    },
+    {
+      "key": "attatt",
+      "location": {
+        "lat":30.279823,"lng":-97.739482
+      },
+      "name": "ATT",
+      "image": "stops/ATTRoute_ATTStop.png"
+    },
+
+
+
+    {
+      "key": "omniacc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "stops/OmniSheraton_ACCStop.png"
+    },
+    {
+      "key": "omninorth",
+      "location": {
+        "lat":30.267778,"lng":-97.739396 
+      },
+      "name": "Omni Hotel North",
+      "image": "stops/OmniSheraton_OmniNorthStop.png"
+    },
+    {
+      "key": "omnisouth",
+      "location": {
+        "lat":30.269446,"lng":-97.738194
+      },
+      "name": "Omni Hotel South",
+      "image": "stops/OmniSheraton_OmniSouthStop.png"
+    },
+    {
+      "key": "omnisheraton",
+      "location": {
+        "lat":30.270224,"lng":-97.733216
+      },
+      "name": "Sheraton Hotel",
+      "image": "stops/OmniSheraton_SheratonStop.png"
+    },
+
+
+    {
+      "key": "acc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "markers/ATT_ACCMarker.png"
+    },
+
+    {
+      "key": "acc",
+      "location": {
+        "lat": 30.262663,
+        "lng": -97.737508
+      },
+      "name": "Austin Convention Center",
+      "image": "markers/ATT_ACCMarker.png"
+    },
+    {
+      "key": "omnin",
+      "location": {
+        "lat": 30.269526,
+        "lng": -97.740726
+      },
+      "name": "Omni Northbound",
+      "description": "Access to: Driskill, SFA InterContinental",
+      "image": "markers/OMNISheraton_OmniNorthMarker.png"
+    },
+    {
+      "key": "att",
+      "location": {
+        "lat": 30.281311,
+        "lng": -97.740426
+      },
+      "name": "ATT Conference Ctr",
+      "image": "markers/ATT_ATTMarker.png"
+    },
+    {
+      "key": "omnis",
+      "location": {
+        "lat": 30.269155,
+        "lng": -97.739567
+      },
+      "name": "Omni Southbound",
+      "image": "markers/OMNISheraton_OmniSouthMarker.png"
+    },
+    {
+      "key": "hilton",
+      "location": {
+        "lat": 30.265374,
+        "lng": -97.741026
+      },
+      "name": "Hilton Downtown/ Courtyard Marriott",
+      "description": "Access to: Hilton Garden Inn, Palm Park"
+    },  
+    {
+      "key": "holiday",
+      "location": {
+        "lat": 30.253625,
+        "lng": -97.737143
+      },
+      "name": "Holiday Inn"
+    },  
+    {
+      "key": "hyatt",
+      "location": {
+        "lat": 30.258739,
+        "lng": -97.747335
+      },
+      "name": "Hyatt/Long/Palmer",
+      "image": "markers/PalmerLongHyatt_HyattMarker.png"
+    },
+    {
+      "key": "palmer",
+      "location": {
+        "lat": 30.259369,
+        "lng": -97.753987
+      },
+      "name": "Palmer",
+      "image": "markers/PalmerLongHyatt_PalmerMarker.png"
+    },  
+    {
+      "key": "sheraton",
+      "location": {
+        "lat": 30.270971,
+        "lng": -97.734717
+      },
+      "name": "Omni/Sheraton",
+      "image": "markers/OMNISheraton_SheratonMarker.png"
+    },
+    {
+      "key": "film",
+      "location": {
+        "lat": 30.258739,
+        "lng": -97.747335
+      },
+      "name": "Film"
+    },
+    {
+      "key": "all",
+      "location": {
+        "lat": 30.258739,
+        "lng": -97.747335
+      },
+      "name": "Convention Ctr"
+    }
+  ],
+  "shuttleRoutes":[
+    {
+      "key": "all",
+      "name": "All Routes",
+      "locationKey": "all",
+      "image": "routes/All.png",
+      "startDate": "2014-03-07",
+      "endDate": "2014-03-16",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.268705,
+        "lng":-97.745190
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.258215,
+          "lng":-97.758622
+        },
+        "ne": {
+          "lat":30.281380,
+          "lng":-97.733130
+        }
+      },
+      "stops": ["attacc"],
+      "shuttles": [
+        "867844000383698",
+        "867844000469349",
+        "867844000381999"
+      ]
+    },
+    {
+      "key": "att",
+      "name":"ATT",
+      "locationKey": "att",
+      "image": "routes/ATT_Route.png",
+      "markerIcon": "att_busasset_163ppi-01.png",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.270706,
+        "lng":-97.741714
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.263108,
+          "lng":-97.747808
+        },
+        "ne": {
+          "lat":30.281417,
+          "lng":-97.735620
+        }
+      },
+      "stops": ["attacc", "attatt"],
+      "shuttles": [
+        "867844000383698",
+        "867844000469349",
+        "867844000381999",
+        "26645084",
+        "26905306",
+        "26905272"
+      ]
+    },
+    {
+      "key": "hyatt",
+      "name": "Palmer+Long+Hyatt",
+      "image": "routes/PalmerLongHyattRoute.png",
+      "markerIcon": "hyatt_busasset_163ppi-01.png",
+      "locationKey": "hyatt", 
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.261588,
+        "lng":-97.746649
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.256991,
+          "lng":-97.751713 
+        },
+        "ne": {
+          "lat":30.265294,
+          "lng":-97.740254 
+        }
+      },
+      "stops": ["palmacc"],
+      "shuttles": [
+        "23653545", 
+        "23653453", 
+        "23653503", 
+        "26645092", 
+        "26645100", 
+        "26645118",
+        "26905223"
+      ]
+    },
+    {
+      "key": "sheraton",
+      "name": "Omni+Sheraton",
+      "image": "routes/OmniSheratonRoute.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.266110,
+        "lng":-97.739654
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.263145,
+          "lng":-97.744288
+        },
+        "ne": {
+          "lat":30.272522,
+          "lng":-97.733088 
+        }
+      },
+      "stops": ["omniacc", "omnisheraton","omnisouth","omninorth"],
+      "shuttles": []
+    },
+    {
+      "key": "film1",
+      "name": "Film",
+      "image": "routes/FilmRoute.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "film",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "10:00",
+      "endTime": "02:30",
+      "mapCenter": {
+        "lat":30.261217,
+        "lng":-97.747293
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.257103,
+          "lng":-97.758579
+        },
+        "ne": {
+          "lat":30.270076,
+          "lng":-97.740169 
+        }
+      },
+      "stops": ["filmacc"],
+      "shuttles": []
+    },
+    {
+      "key": "film2",
+      "name": "Alt Film (Mar 12-15)",
+      "image": "routes/AltFilmRoute.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "film",
+      "startDate": "2013-03-13",
+      "endDate": "2013-03-16",
+      "startTime": "10:00",
+      "endTime": "02:30",
+      "mapCenter": {
+        "lat":30.261217,
+        "lng":-97.747293
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.258066,
+          "lng":-97.758579
+        },
+        "ne": {
+          "lat":30.270076,
+          "lng":-97.740169
+        }
+      },
+      "stops": ["altacc","altviolet","alttopfer","altparamount","altrollins"],
+      "shuttles": []
+    }
+  ]
+}    
