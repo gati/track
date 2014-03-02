@@ -292,9 +292,9 @@
           "lng":-97.733130
         }
       },
-      "stops": ["attacc"],
+      "stops": ["attacc", "attatt", "palmpalm", "palmhyatt", "palmlong", "omninorth", "omnisouth", "omnisheraton"],
       "shuttles": [
-        "867844000383698",
+        "8880324502",
         "867844000469349",
         "867844000381999"
       ]

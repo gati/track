@@ -18,6 +18,8 @@ class exports.App
     setupCollection = (key) => @store[key].add item for item in json[key]
     setupCollection(key) for key in _(@store).keys()
 
+    @store.trackers = new track.Collections.Trackers()
+
   setupInitialViews: =>
     sections = @store.sections
     @statefulViews.navigation = (new track.Views.Navigation(collection:sections, appState:@)).render()
@@ -30,9 +32,25 @@ class exports.App
 
     @statefulViews.mapCanvas = (new track.Views.MapCanvas(appState:@)).render()
 
+  updateTrackerModels: (data) =>
+    keys = _(data).keys()
+    _(data).each (item) =>
+      trackerData = _(item).values()[0]
+      model = @store.trackers.findWhere serialno: trackerData.serialno
+      if model
+        model.set 'lat', trackerData.lat, silent:true
+        model.set 'lon', trackerData.lon, silent:true
+        model.trigger 'change'
+
+      else
+        model = @store.trackers.add(trackerData)
+
   appReady: => 
     @setupInitialViews()
     Backbone.history.start()
+
+    socket = io.connect('http://localhost:8082')
+    socket.on 'shuttle-positions', @updateTrackerModels
 
   init: =>
     _.mixin(_.str.exports())
@@ -44,7 +62,7 @@ class exports.App
 
     bootstrapData = @getBootstrapData()
     bootstrapData.then @setupStore
-    bootstrapData.then () => @trigger "app:ready"   
+    bootstrapData.then () => @trigger "app:ready"
 
 $ ->
   'use strict'

@@ -9,11 +9,15 @@ class exports.MapCanvas extends Backbone.View
     @setListeners()
 
     @markers = []
+    @trackers = []
 
     super options
 
   setListeners: =>
-    @appState.bus.on "map:routeReady", @setRouteOverlay
+    #@appState.bus.on "map:routeReady", @setRouteOverlay
+    @appState.store.trackers.on "add", (trackerModel) =>
+      if @currentRoute? and trackerModel.get("serialno").toString() in @currentRoute.get("shuttles")
+        @setTracker trackerModel
 
   render: =>
     google.maps.visualRefresh = true
@@ -44,7 +48,7 @@ class exports.MapCanvas extends Backbone.View
       console.log('"lat":'+e.latLng.lat().toFixed(6)+","+'"lng":'+e.latLng.lng().toFixed(6))
 
     # drop the a pin on the map for the current user
-    @getUserLocation @setUserMapLocation
+    # @getUserLocation @setUserMapLocation
 
     @
 
@@ -84,8 +88,13 @@ class exports.MapCanvas extends Backbone.View
     @overlay = new window.mapOverlay(googleBounds, "/images/#{image}", @mapObj)
 
 
-  clearMarkers: =>
-    _(@markers).each (marker) => marker.setMap null
+  clearMarkers: (arr) =>
+    arr ||= @markers
+    _(arr).each (marker) => 
+      marker.marker.setMap null
+      @stopListening marker.model
+
+  clearTrackers: => @clearMarkers(@trackers)
 
   setShuttleStop: (stopModel) =>
     coords = stopModel.get("location")
@@ -97,10 +106,25 @@ class exports.MapCanvas extends Backbone.View
       map: @mapObj
       shadow: "images/transparent-map-icon.png"
 
-    @markers.push marker
+    @markers.push model: stopModel, marker: marker
 
     #infoWindow = new google.maps.InfoWindow()
 
     #google.maps.event.addDomListener marker, "click", () =>
     #  infoWindow.setContent(stopModel.get("name"))
     #  infoWindow.open(@mapObj, marker)
+
+  setTracker: (trackerModel) =>
+    image = "trackers/OmniSheratonMarker.png"
+    position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lon"))
+    tracker = new RichMarker
+      position: position
+      content: '<div class="markerContainer"><img src="images/'+image+'"/></div>'
+      map: @mapObj
+      shadow: "images/transparent-map-icon.png"
+
+    @trackers.push model: trackerModel, marker: tracker
+
+    @listenTo trackerModel, "change", () -> 
+      position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lon"))
+      tracker.setPosition(position);

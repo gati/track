@@ -55,8 +55,13 @@ class exports.Main extends Backbone.Router
     # format data how we'd like it
     #
     route = @appState.store.shuttleRoutes.findWhere key: slug
+    @mapView.currentRoute = route
+    
     stops = @appState.store.shuttleStops.filter (stop) -> 
       stop.get("key") in route.get "stops"
+
+    trackers = @appState.store.trackers.filter (tracker) ->
+      tracker.get('serialno') in route.get "shuttles"
 
     route.set "stopModels", stops    
     
@@ -83,3 +88,9 @@ class exports.Main extends Backbone.Router
     #
     @mapView.clearMarkers()
     _(stops).each @mapView.setShuttleStop
+
+    #
+    # Add shuttles to the map
+    #
+    @mapView.clearTrackers()
+    _(trackers).each @mapView.setTracker
