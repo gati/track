@@ -51,7 +51,7 @@ class exports.App
 
     #socket = io.connect('http://198.61.171.237:8085')
     #socket.on 'shuttle-positions', @updateTrackerModels
-    pusher = new Pusher('a420c73a7a8a33664863')
+    pusher = new Pusher(window.track.config.pusher.key)
     channel = pusher.subscribe('sxsw')
     channel.bind 'shuttle:location', @updateTrackerModels
 
