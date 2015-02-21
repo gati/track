@@ -6,7 +6,8 @@ class exports.Flash extends Backbone.View
   initialize: (options) =>
     throw new Error("Flash view requires options.message on init") unless options.message
     @message = options.message
-    @messageType = options.messageType ? "info"
+    #@messageType = options.messageType ? "info"
+    @messageType = "info"
 
   events: 
     "click [data-role=close]": "close"

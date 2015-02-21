@@ -29,24 +29,27 @@ class exports.Main extends Backbone.Router
     # based on the right, set the right message
     #
     makeMessage = (route) ->
+      if route.get "message"
+        return route.get "message"
+
       routeJSON = route.toJSON()
       routeJSON.stopModels = (stop.toJSON() for stop in routeJSON.stopModels)
 
       routeName = if route.get("key") is "all" then "Shuttle routes are" else "The <b>#{routeJSON.name}</b> route is"
 
-      if not route.isActive()
-        message = "Oh nooooes! #{routeName} only active from 
-          #{route.prettyDate('startDate')} to #{route.prettyDate('endDate')} 
-          #ilovewalking"
+      #if not route.isActive()
+      #  message = "Oh nooooes! #{routeName} only active from 
+      #    #{route.prettyDate('startDate')} to #{route.prettyDate('endDate')} 
+      #    #ilovewalking"
 
-      else if not route.isOperating()
-        message = "Bummer! #{routeName} only active from 
-          #{route.prettyTime('startTime')} to #{route.prettyTime('endTime')} 
+      #if not route.isOperating()
+      #  message = "Bummer! #{routeName} only active from 
+      #    #{route.prettyTime('startTime')} to #{route.prettyTime('endTime')} 
           #sadface"
 
-      else
-        message = "You're looking at the <b>#{route.name}</b> route! It stops at 
-          #{listStops(routeJSON.stopModels)}"
+      #else
+      message = "You're looking at the <b>#{routeJSON.name}</b> route! It stops at 
+        #{listStops(routeJSON.stopModels)}"
 
 
       message
@@ -55,23 +58,26 @@ class exports.Main extends Backbone.Router
     # format data how we'd like it
     #
     route = @appState.store.shuttleRoutes.findWhere key: slug
+
     @mapView.currentRoute = route
     
     stops = @appState.store.shuttleStops.filter (stop) -> 
       stop.get("key") in route.get "stops"
 
     trackers = @appState.store.trackers.filter (tracker) ->
-      tracker.get('serialno') in route.get "shuttles"
+      tracker.get('device_id') in route.get "shuttles"
 
     route.set "stopModels", stops    
     
     #
     # Show the right message above the map
     #
-    message = makeMessage route
-    messageType = if not route.isActive() or not route.isOperating() then "warning" else "info"
-
-    flash = (new window.track.Views.Flash(message:message, messageType: messageType)).render()
+    if route.get "message"
+      message = makeMessage route
+      messageType = if not route.isActive() or not route.isOperating() then "warning" else "info"
+      flash = (new window.track.Views.Flash(message:message, messageType: messageType)).render()
+    else
+      $("#flash").empty()
 
     #
     # reposition the map based on this route's center coords

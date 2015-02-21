@@ -28,18 +28,18 @@ class exports.App
       are in green. Use the Routes menu to find a shuttle stopping 
       at your location."
 
-    flash = (new track.Views.Flash(message:message)).render()
+    #flash = (new track.Views.Flash(message:message)).render()
 
     @statefulViews.mapCanvas = (new track.Views.MapCanvas(appState:@)).render()
 
   updateTrackerModels: (data) =>
     keys = _(data).keys()
     _(data).each (item) =>
-      trackerData = _(item).values()[0]
-      model = @store.trackers.findWhere serialno: trackerData.serialno
+      trackerData = item
+      model = @store.trackers.findWhere device_id: trackerData.device_id
       if model
         model.set 'lat', trackerData.lat, silent:true
-        model.set 'lon', trackerData.lon, silent:true
+        model.set 'lng', trackerData.lng, silent:true
         model.trigger 'change'
 
       else
@@ -49,8 +49,12 @@ class exports.App
     @setupInitialViews()
     Backbone.history.start()
 
-    socket = io.connect('http://localhost:8082')
-    socket.on 'shuttle-positions', @updateTrackerModels
+    #socket = io.connect('http://198.61.171.237:8085')
+    #socket.on 'shuttle-positions', @updateTrackerModels
+    pusher = new Pusher('a420c73a7a8a33664863')
+    channel = pusher.subscribe('sxsw')
+    channel.bind 'shuttle:location', @updateTrackerModels
+
 
   init: =>
     _.mixin(_.str.exports())
@@ -58,11 +62,11 @@ class exports.App
     @router = new track.Routers.Main(appState: @)
     @bus = _.extend {}, Backbone.Events
 
-    @on "app:ready", @appReady
+    #@on "app:ready", @appReady
 
     bootstrapData = @getBootstrapData()
     bootstrapData.then @setupStore
-    bootstrapData.then () => @trigger "app:ready"
+    bootstrapData.then () => @appReady()
 
 $ ->
   'use strict'

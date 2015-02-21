@@ -5,7 +5,7 @@ class exports.MapCanvas extends Backbone.View
 
   initialize: (options) =>
     @appState = options.appState
-    google.maps.event.addDomListener(window, 'load', @render)
+    #google.maps.event.addDomListener(window, 'load', @render)
     @setListeners()
 
     @markers = []
@@ -16,7 +16,7 @@ class exports.MapCanvas extends Backbone.View
   setListeners: =>
     #@appState.bus.on "map:routeReady", @setRouteOverlay
     @appState.store.trackers.on "add", (trackerModel) =>
-      if @currentRoute? and trackerModel.get("serialno").toString() in @currentRoute.get("shuttles")
+      if @currentRoute? and trackerModel.get("device_id").toString() in @currentRoute.get("shuttles")
         @setTracker trackerModel
 
   render: =>
@@ -115,8 +115,8 @@ class exports.MapCanvas extends Backbone.View
     #  infoWindow.open(@mapObj, marker)
 
   setTracker: (trackerModel) =>
-    image = "trackers/OmniSheratonMarker.png"
-    position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lon"))
+    image = "trackers/darkbus.png"
+    position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lng"))
     tracker = new RichMarker
       position: position
       content: '<div class="markerContainer"><img src="images/'+image+'"/></div>'
@@ -126,5 +126,5 @@ class exports.MapCanvas extends Backbone.View
     @trackers.push model: trackerModel, marker: tracker
 
     @listenTo trackerModel, "change", () -> 
-      position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lon"))
+      position = new google.maps.LatLng(trackerModel.get("lat"), trackerModel.get("lng"))
       tracker.setPosition(position);

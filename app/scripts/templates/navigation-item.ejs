@@ -1,4 +1,8 @@
 <li><label><%= name %></label></li>
 <% _.each(routes, function(route) { %> 
-  <li><a href="/#shuttle-route/<%= route.key %>"><%= route.name %></a></li> 
+  <% if(route.type && route.type === "static") { %>
+    <li><a href="<%= route.url %>"><%= route.name %></a></li> 
+  <% } else { %> 
+    <li><a href="/#shuttle-route/<%= route.key %>"><%= route.name %></a></li> 
+  <% } %>
 <% }); %>
