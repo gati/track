@@ -5,262 +5,103 @@
       "key": "interactive",
       "routes": ["south", "north", "all", "shuttleinfo"]
     }
-  ],
+  ], 
   "shuttleStops": [
-    
-    
     {
-      "key": "filmacc",
+      "key": "omni",
       "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
+        "lat":30.269594,"lng":-97.739997
       },
-      "name": "Austin Convention Center",
-      "image": "stops/FilmRoute_ACCStop.png"
-    },
-    
-
-    {
-      "key": "palmacc",
-      "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
-      },
-      "name": "Austin Convention Center",
-      "image": "stops/PalmerLongHyatt_ACCStop.png"
+      "name": "Omni Hotel",
+      "image": "stops/AllRoutes_OmniStop.png"
     },
     {
-      "key": "palmpalm",
+      "key": "paramount",
       "location": {
-        "lat":30.260884,"lng":-97.752142
+        "lat":30.268000,"lng":-97.744889
       },
-      "name": "Palmer Event Center",
-      "image": "stops/PalmerLongHyatt_PalmerStop.png"
+      "name": "Paramount/Stateside",
+      "image": "stops/AllRoutes_ParamountStatesideStop.png"
     },
     {
-      "key": "palmhyatt",
+      "key": "intercontinental",
       "location": {
-        "lat":30.258734,"lng":-97.745447 
+        "lat":30.267222,"lng":-97.740512
       },
-      "name": "Hyatt Hotel",
-      "image": "stops/PalmerLongHyatt_HyattStop.png"
+      "name": "Intercontinental Stephen F. Austin/Driskill Stop",
+      "image": "stops/AllRoutes_InterContinentalStephenFAustinDriskillStop.png"
     },
     {
-      "key": "palmlong",
+      "key": "marriottout",
       "location": {
-        "lat":30.258474,"lng":-97.751369 
+        "lat":30.264961,"lng":-97.740941
       },
-      "name": "Long Center",
-      "image": "stops/PalmerLongHyatt_LongCenterStop.png"
-    },
-
-
-
-    {
-      "key": "altacc",
-      "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
-      },
-      "name": "Austin Convention Center",
-      "image": "stops/AltFilmRoute_ACCStop.png"
+      "name": "JW Marriott Outbound Stop",
+      "image": "stops/AllRoutes_JWMarriottOutboundStop.png"
     },
     {
-      "key": "altrollins",
+      "key": "marriottin",
       "location": {
-        "lat":30.258919,"lng":-97.753429 
+        "lat":30.265294,"lng":-97.746563
       },
-      "name": "Alternate Rollins",
-      "image": "stops/AltFilmRoute_AlternateRollinsStop.png"
+      "name": "JW Marriott Inbound Stop",
+      "image": "stops/AllRoutes_JWMarriottInboundStop.png"
     },
-    {
-      "key": "altparamount",
-      "location": {
-        "lat":30.269335,"lng":-97.745748
-      },
-      "name": "Paramount InterContinental",
-      "image": "stops/AltFilmRoute_ParamountIntercontinentalStop.png"
-    },
-    {
-      "key": "alttopfer",
-      "location": {
-        "lat":30.262848,"lng":-97.757549 
-      },
-      "name": "Topfer Theatre",
-      "image": "stops/AltFilmRoute_TopferTheatreStop.png"
-    },
-    {
-      "key": "altviolet",
-      "location": {
-        "lat":30.264331,"lng":-97.745619
-      },
-      "name": "Violet Crown",
-      "image": "stops/AltFilmRoute_VioletCrownStop.png"
-    },
-
-
-
-    {
-      "key": "attacc",
-      "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
-      },
-      "name": "Austin Convention Center",
-      "image": "stops/ATTRoute_ACCStop.png"
-    },
-    {
-      "key": "attatt",
-      "location": {
-        "lat":30.279823,"lng":-97.739482
-      },
-      "name": "ATT",
-      "image": "stops/ATTRoute_ATTStop.png"
-    },
-
-
-
-    {
-      "key": "omniacc",
-      "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
-      },
-      "name": "Austin Convention Center",
-      "image": "stops/OmniSheraton_ACCStop.png"
-    },
-    {
-      "key": "omninorth",
-      "location": {
-        "lat":30.267778,"lng":-97.739396 
-      },
-      "name": "Omni Hotel North",
-      "image": "stops/OmniSheraton_OmniNorthStop.png"
-    },
-    {
-      "key": "omnisouth",
-      "location": {
-        "lat":30.269446,"lng":-97.738194
-      },
-      "name": "Omni Hotel South",
-      "image": "stops/OmniSheraton_OmniSouthStop.png"
-    },
-    {
-      "key": "omnisheraton",
-      "location": {
-        "lat":30.270224,"lng":-97.733216
-      },
-      "name": "Sheraton Hotel",
-      "image": "stops/OmniSheraton_SheratonStop.png"
-    },
-
-
     {
       "key": "acc",
       "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
+        "lat":30.262811,"lng":-97.743216
       },
-      "name": "Austin Convention Center",
-      "image": "markers/ATT_ACCMarker.png"
-    },
-
-    {
-      "key": "acc",
-      "location": {
-        "lat": 30.262663,
-        "lng": -97.737508
-      },
-      "name": "Austin Convention Center",
-      "image": "markers/ATT_ACCMarker.png"
+      "name": "Austin Convention Center Stop",
+      "image": "stops/AllRoutes_AustinConventionCenterStop.png"
     },
     {
-      "key": "omnin",
+      "key": "palmerout",
       "location": {
-        "lat": 30.269526,
-        "lng": -97.740726
+        "lat":30.261069,"lng":-97.749352
       },
-      "name": "Omni Northbound",
-      "description": "Access to: Driskill, SFA InterContinental",
-      "image": "markers/OMNISheraton_OmniNorthMarker.png"
+      "name": "Palmer/Long Center Outbound Stop",
+      "image": "stops/AllRoutes_PalmerLongCenterOutboundStop.png"
     },
     {
-      "key": "att",
+      "key": "palmerin",
       "location": {
-        "lat": 30.281311,
-        "lng": -97.740426
+        "lat":30.260735,"lng":-97.754073
       },
-      "name": "ATT Conference Ctr",
-      "image": "markers/ATT_ATTMarker.png"
+      "name": "Palmer/Long Center Inbound Stop",
+      "image": "stops/AllRoutes_PalmerLongCenterInboundStop.png"
     },
     {
-      "key": "omnis",
+      "key": "hyattin",
       "location": {
-        "lat": 30.269155,
-        "lng": -97.739567
+        "lat":30.259364,"lng":-97.750597
       },
-      "name": "Omni Southbound",
-      "image": "markers/OMNISheraton_OmniSouthMarker.png"
+      "name": "Hyatt Inbound Stop",
+      "image": "stops/AllRoutes_HyattInboundStop.png"
     },
     {
-      "key": "hilton",
+      "key": "hyattout",
       "location": {
-        "lat": 30.265374,
-        "lng": -97.741026
+        "lat":30.258771,"lng":-97.744975
       },
-      "name": "Hilton Downtown/ Courtyard Marriott",
-      "description": "Access to: Hilton Garden Inn, Palm Park"
-    },  
-    {
-      "key": "holiday",
-      "location": {
-        "lat": 30.253625,
-        "lng": -97.737143
-      },
-      "name": "Holiday Inn"
-    },  
-    {
-      "key": "hyatt",
-      "location": {
-        "lat": 30.258739,
-        "lng": -97.747335
-      },
-      "name": "Hyatt/Long/Palmer",
-      "image": "markers/PalmerLongHyatt_HyattMarker.png"
+      "name": "Hyatt Outbound Stop",
+      "image": "stops/AllRoutes_HyattOutboundStop.png"
     },
     {
-      "key": "palmer",
+      "key": "topfer",
       "location": {
-        "lat": 30.259369,
-        "lng": -97.753987
+        "lat":30.263997,"lng":-97.759609
       },
-      "name": "Palmer",
-      "image": "markers/PalmerLongHyatt_PalmerMarker.png"
-    },  
-    {
-      "key": "sheraton",
-      "location": {
-        "lat": 30.270971,
-        "lng": -97.734717
-      },
-      "name": "Omni/Sheraton",
-      "image": "markers/OMNISheraton_SheratonMarker.png"
+      "name": "Topfer Theatre Stop",
+      "image": "stops/AllRoutes_TopferTheatreStop.png"
     },
     {
-      "key": "film",
+      "key": "alamo",
       "location": {
-        "lat": 30.258739,
-        "lng": -97.747335
+        "lat":30.255768,"lng":-97.761326
       },
-      "name": "Film"
-    },
-    {
-      "key": "all",
-      "location": {
-        "lat": 30.258739,
-        "lng": -97.747335
-      },
-      "name": "Convention Ctr"
+      "name": "Alamo Drafthouse Stop",
+      "image": "stops/AllRoutes_AlamoDrafthouseStop.png"
     }
   ],
   "shuttleRoutes":[
@@ -292,30 +133,23 @@
           "lng":-97.740254 
         }
       },
-      "stops": [],
+      "stops": [
+        "omni",
+        "paramount",
+        "intercontinental",
+        "marriottout",
+        "marriottin",
+        "acc",
+        "palmerin",
+        "palmerout",
+        "hyattin",
+        "hyattout",
+        "topfer",
+        "alamo"
+      ],
       "shuttles": [
         "867844000584006",
-        "867844001092264",
-        "8880324696",
-        "8880324703",
-        "8880324705",
-        "8880324706",
-        "8880324708",
-        "8880324710",
-        "8880324711",
-        "8880324697",
-        "8880324698",
-        "8880324699",
-        "8880324700",
-        "8880324701",
-        "8880324702",
-        "8880324687", 
-        "8880324688", 
-        "8880324652",
-        "8880324690",
-        "8880324691",
-        "8880324692",
-        "8880324692"
+        "867844001092264"
       ]
     },
     {
@@ -337,19 +171,21 @@
           "lng":-97.763686
         },
         "ne": {
-          "lat":30.268223,
-          "lng":-97.740083
+          "lat":30.267815,"lng":-97.740297
         }
       },
-      "stops": [],
-      "shuttles": [
-        "8880324703",
-        "8880324705",
-        "8880324706",
-        "8880324708",
-        "8880324710",
-        "8880324711"
-      ]
+      "stops": [
+        "marriottout",
+        "marriottin",
+        "acc",
+        "palmerin",
+        "palmerout",
+        "hyattin",
+        "hyattout",
+        "topfer",
+        "alamo"
+      ],
+      "shuttles": []
     },
     {
       "key": "north",
@@ -374,15 +210,15 @@
           "lng":-97.740254 
         }
       },
-      "stops": [],
-      "shuttles": [
-        "8880324697",
-        "8880324698",
-        "8880324699",
-        "8880324700",
-        "8880324701",
-        "8880324702"
-      ]
+      "stops": [
+        "marriottout",
+        "marriottin",
+        "acc",
+        "omni",
+        "paramount",
+        "intercontinental"
+      ],
+      "shuttles": []
     },
     {
       "key": "hotelinfo",
@@ -415,15 +251,8 @@
           "lng":-97.740169
         }
       },
-      "stops": ["altacc","altviolet","alttopfer","altparamount","altrollins"],
+      "stops": [],
       "shuttles": [
-        "8880324687", 
-        "8880324688", 
-        "8880324652",
-        "8880324690",
-        "8880324691",
-        "8880324692",
-        "8880324692"
       ]
     }
   ]
