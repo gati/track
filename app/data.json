@@ -4,6 +4,28 @@
       "name":"Festival Shuttles", 
       "key": "interactive",
       "routes": ["south", "north", "all", "shuttleinfo"]
+    },
+    {
+      "name": "Hotel Shuttles", 
+      "key": "film",
+      "routes": [
+        "hotelinfo",
+        "hotelnw15",
+        "hotelnw14",
+        "hotelnw13",
+        "hotelnw12",
+        "hotelsouth11",
+        "hotelsouth10",
+        "hotelsouth9",
+        "hoteleast8",
+        "hoteleast7",
+        "hoteleast6",
+        "hotelcentral5",
+        "hotelnorth4",
+        "hotelnorth3",
+        "hotelnorth2",
+        "hotelnorth1"
+      ]
     }
   ], 
   "shuttleStops": [
@@ -102,7 +124,154 @@
       },
       "name": "Alamo Drafthouse Stop",
       "image": "stops/AllRoutes_AlamoDrafthouseStop.png"
+    },
+
+
+    {
+      "key": "north1",
+      "location": {
+        "lat":30.322471,"lng":-97.704377
+      },
+      "name": "North 1",
+      "image": "stops/NorthRoute1.png"
+    },
+    {
+      "key": "north2",
+      "location": {
+        "lat":30.316877,"lng":-97.707596
+      },
+      "name": "North 2",
+      "image": "stops/NorthRoute2.png"
+    },
+    {
+      "key": "north3",
+      "location": {
+        "lat":30.325360,"lng":-97.709999
+      },
+      "name": "North 4",
+      "image": "stops/NorthRoute3.png"
+    },
+    {
+      "key": "north4",
+      "location": {
+        "lat":30.334287,"lng":-97.703261
+      },
+      "name": "North 4",
+      "image": "stops/NorthRoute4.png"
+    },
+    {
+      "key": "central51",
+      "location": {
+        "lat":30.279045,"lng":-97.741756
+      },
+      "name": "Central 5",
+      "image": "stops/CentralRoute5-1.png"
+    },
+    {
+      "key": "central52",
+      "location": {
+        "lat":30.282714,"lng":-97.721844
+      },
+      "name": "Central 5",
+      "image": "stops/CentralRoute5-2.png"
+    },
+    {
+      "key": "east6",
+      "location": {
+        "lat":30.214130,"lng":-97.695408
+      },
+      "name": "East 6",
+      "image": "stops/EastRoute6.png"
+    },
+    {
+      "key": "east7",
+      "location": {
+        "lat":30.219322,"lng":-97.686009
+      },
+      "name": "East 7",
+      "image": "stops/EastRoute7.png"
+    },
+    {
+      "key": "east8",
+      "location": {
+        "lat":30.210347,"lng":-97.668972
+      },
+      "name": "East 8",
+      "image": "stops/EastRoute8.png"
+    },
+    {
+      "key": "south91",
+      "location": {
+        "lat":30.252654,"lng":-97.737207
+      },
+      "name": "South 9",
+      "image": "stops/SouthRoute9-1.png"
+    },
+    {
+      "key": "south92",
+      "location": {
+        "lat":30.232931,"lng":-97.741714
+      },
+      "name": "South 9",
+      "image": "stops/SouthRoute9-2.png"
+    },
+    {
+      "key": "south10",
+      "location": {
+        "lat":30.213982,"lng":-97.748537
+      },
+      "name": "South 10",
+      "image": "stops/SouthRoute10.png"
+    },
+    {
+      "key": "south11",
+      "location": {
+        "lat":30.211719,"lng":-97.745919
+      },
+      "name": "South 11",
+      "image": "stops/SouthRoute11.png"
+    },
+    {
+      "key": "nw12",
+      "location": {
+        "lat":30.398752,"lng":-97.720728
+      },
+      "name": "Northwest 12",
+      "image": "stops/NorthwestRoute12.png"
+    },
+    {
+      "key": "nw13",
+      "location": {
+        "lat":30.397198,"lng":-97.735877
+      },
+      "name": "Northwest 13",
+      "image": "stops/NorthwestRoute13.png"
+    },
+    {
+      "key": "nw141",
+      "location": {
+        "lat":30.398012,"lng":-97.742958
+      },
+      "name": "Northwest 14",
+      "image": "stops/NorthwestRoute14-1.png"
+    },
+    {
+      "key": "nw142",
+      "location": {
+        "lat":30.388054,"lng":-97.743387
+      },
+      "name": "Northwest 14",
+      "image": "stops/NorthwestRoute14-2.png"
+    },
+    {
+      "key": "nw15",
+      "location": {
+        "lat":30.384982,"lng":-97.735233
+      },
+      "name": "Northwest 15",
+      "image": "stops/NorthwestRoute15.png"
     }
+
   ],
   "shuttleRoutes":[
     {
@@ -227,33 +396,412 @@
       "url": "http://sxsw.com/attend/hotels/shuttles"
     },
     {
-      "key": "film2",
-      "message": "The Hotel Shuttle Service is offered at a reasonable cost to all SXSW Registrants. For more information and to purchase please visit our Hotel Shuttles Page.",
-      "name": "Alt Film (Mar 12-15)",
-      "image": "routes/AltFilmRoute.png",
+      "key": "hotelnorth1",
+      "name": "North 1",
+      "image": "transparent-map-icon.png",
       "markerIcon": "sheraton_busasset_163ppi-01.png",
-      "locationKey": "film",
-      "startDate": "2013-03-13",
-      "endDate": "2013-03-16",
-      "startTime": "10:00",
-      "endTime": "02:30",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
       "mapCenter": {
-        "lat":30.261217,
-        "lng":-97.747293
+        "lat":30.322026,"lng":-97.706351
       },
       "overlayBounds": {
         "sw": {
-          "lat":30.258066,
-          "lng":-97.758579
+          "lat":30.262292,"lng":-97.744718
         },
         "ne": {
-          "lat":30.270076,
-          "lng":-97.740169
+          "lat":30.269928,
+          "lng":-97.740254 
         }
       },
-      "stops": [],
-      "shuttles": [
-      ]
+      "stops": [
+        "north1"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnorth2",
+      "name": "North 2",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.321619,"lng":-97.708282
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "north2"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnorth3",
+      "name": "North 3",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.323841,"lng":-97.713346
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "north3"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnorth4",
+      "name": "North 4",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.337250,"lng":-97.701631
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "north4"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelcentral5",
+      "name": "Central 5",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.281676,"lng":-97.739310
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "central51",
+        "central52"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hoteleast6",
+      "name": "East 6",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.214130,"lng":-97.695408
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "east6"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hoteleast7",
+      "name": "East 7",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.220954,"lng":-97.685966
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "east7"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hoteleast8",
+      "name": "East 8",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.212239,"lng":-97.660861
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "east8"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelsouth9",
+      "name": "South 9",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.243015,"lng":-97.739825
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "south91",
+        "south92"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelsouth10",
+      "name": "South 10",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.216615,"lng":-97.744117
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "south10"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelsouth11",
+      "name": "South 11",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.213277,"lng":-97.745576
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "south11"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnw12",
+      "name": "Northwest 12",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.398752,"lng":-97.720728
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "nw12"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnw13",
+      "name": "Northwest 13",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.397198,"lng":-97.735877
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "nw13"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnw14",
+      "name": "Northwest 14",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.399382,"lng":-97.745061
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "nw141",
+        "nw142"
+      ],
+      "shuttles": []
+    },
+    {
+      "key": "hotelnw15",
+      "name": "Northwest 15",
+      "image": "transparent-map-icon.png",
+      "markerIcon": "sheraton_busasset_163ppi-01.png",
+      "locationKey": "sheraton",
+      "startDate": "2013-03-08",
+      "endDate": "2013-03-11",
+      "startTime": "08:00",
+      "endTime": "19:00",
+      "mapCenter": {
+        "lat":30.388684,"lng":-97.734761
+      },
+      "overlayBounds": {
+        "sw": {
+          "lat":30.262292,"lng":-97.744718
+        },
+        "ne": {
+          "lat":30.269928,
+          "lng":-97.740254 
+        }
+      },
+      "stops": [
+        "nw15"
+      ],
+      "shuttles": []
     }
   ]
 }    

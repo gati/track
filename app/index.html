@@ -27,9 +27,7 @@
         <div id="info" class="reveal-modal" data-reveal>
           <h2>SXSW Tracker 2015</h2>
           <p class="lead">The easiest way to get around SXSW!</p>
-          <p>This application was designed and developed by  
-            <a href="http://goodattheinternet.com">Jonathon Morgan</a>. Hit him 
-            up on Twitter <a href="http://twitter.com/jonathonmorgan">@jonathonmorgan</a>.</p>
+          <p>Shuttle service starts on March 13. Learn <a href="http://sxsw.com/shuttles">more about festival and hotel shuttles at SXSW.com</a>.</p>
           <a class="close-reveal-modal">&#215;</a>
         </div>
 
@@ -48,7 +46,7 @@
               <section class="top-bar-section">
                 <ul class="right">
                   <li><h1 style="padding-right:7px">
-                    <a href="#" data-reveal-id="info">SX Tracker 2015</a></h1>
+                    <a id="modal-show" href="#" data-reveal-id="info">SX Tracker 2015</a></h1>
                   </li>
                 </ul>
               </section>
@@ -99,8 +97,14 @@
         <script src="bower_components/map-overlay/rich-marker.js"></script>
         <!-- endbuild -->
 
-        <script> $(document).foundation(); </script>
-
+        <script> 
+            $(document).foundation(); 
+            $(function() {
+                if(moment().isBefore('2015-03-13')) {
+                    $('#modal-show').trigger('click');
+                }
+            });
+        </script>
         <!-- build:js({.tmp,app}) scripts/main.js -->        
         <script src="scripts/utils.js"></script>
         <script src="scripts/config.js"></script>
